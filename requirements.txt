@@ -1,0 +1,8 @@
+flake8==3.9.2
+freezegun==1.1.0
+mock==4.0.3
+parameterized==0.8.1
+pycodestyle==2.7.0
+tox==3.23.1
+pytest==7.1.2
+psutil==5.9.7
