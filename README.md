@@ -1,21 +1,15 @@
->Please use branch ```flask-app-tests``` for this task that already exist in your forked repository after you has been started task
-# flask-app-tests
+>Please use branch ```flask-app-docker``` for this task that already exist in your forked repository after you has been started task
+# flask-app-docker
 
-Create unit tests for Flask project from the previous task.  
+Dockerize flask project from the previous tasks.
 
-Put your tests into _tests_ folder. 
+- [ ] Create Dockerfile. On the start flask application has to be launch
+- [ ] Set application host to 0.0.0.0 (default is 127.0.0.1)
+- [ ] Create build.sh to build image with _flask-app_ name
+- [ ] Create _docker-compose_ file to start application.
 
-Implement tests for scripts from  **handlers** folder.
-
-Code coverage has to be equal or more than 80%. 
-
-Use tox to run unit tests localy: 
-
-    $ pip install -r requirements.txt
-    $ tox -r
-
-or pytest:
-
-    $ pytest --cov=handlers --cov-fail-under=80
-
-See also https://pytest-cov.readthedocs.io/en/latest/reporting.html
+Push into the repository:
+- Dockerfile
+- Modified start.py
+- build.sh
+- docker-compose.yml

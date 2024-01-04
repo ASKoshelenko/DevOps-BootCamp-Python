@@ -3,16 +3,14 @@ from handlers.pull_requests import get_pull_requests
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def hello():
     return redirect(url_for('pull_requests'))
-
 
 @app.route('/pull_requests')
 def pull_requests():
     state = request.args.get("state", "open")
     return render_template("pull_requests.j2", pull_requests=get_pull_requests(state))
 
-
-app.run()
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
