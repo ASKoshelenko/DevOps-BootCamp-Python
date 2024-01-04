@@ -1,0 +1,15 @@
+{% for host in virtual_hosts %}
+{% if host.enabled %}
+<VirtualHost *:80>
+  ServerName {{ host.server_name }}
+  DocumentRoot {{ host.document_root }}
+  ServerAdmin {{ host.server_admin }}
+  <Directory "{{ host.directory.path }}">
+     AllowOverride {{ host.directory.allow_override }}
+     Options {{ host.directory.options }}
+     Order {{ host.directory.order }}
+     Allow from {{ host.directory.allow_from }}
+  </Directory>
+</VirtualHost>
+{% endif %}
+{% endfor %}

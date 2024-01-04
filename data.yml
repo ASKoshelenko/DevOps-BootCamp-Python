@@ -1,0 +1,19 @@
+virtual_hosts:
+  - server_name: "www.domain1.tld"
+    document_root: "/www/domain1"
+    server_admin: "admin1@domain1.tld"
+    directory:
+      path: "/usr/local/httpd/domain1"
+      allow_override: "All"
+      options: "Indexes FollowSymLinks"
+      order: "allow,deny"
+      allow_from: "all"
+  - server_name: "www.domain2.tld"
+    document_root: "/www/domain2"
+    server_admin: "admin2@domain2.tld"
+    directory:
+      path: "/usr/local/httpd/domain2"
+      allow_override: "All"
+      options: "Indexes FollowSymLinks"
+      order: "allow,deny"
+      allow_from: "all"
