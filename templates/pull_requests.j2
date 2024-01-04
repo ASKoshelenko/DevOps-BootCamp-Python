@@ -13,8 +13,10 @@
 <body>
 
 <div class="btn-group" role="group" aria-label="Basic example">
-    <a type="button" class="btn btn-primary" href="/pull_requests?state=open">Open</a>
-    <a type="button" class="btn btn-secondary" href="/pull_requests?state=closed">Closed</a>
+    <a type="button" class="btn btn-primary" href="pull_requests?state=open">open</a>
+    <a type="button" class="btn btn-secondary" href="pull_requests?state=closed">closed</a>
+    <a type="button" class="btn btn-danger" href="pull_requests?state=bug">bug</a>
+    <a type="button" class="btn btn-success" href="pull_requests?state=needs-review">needs-review</a>
 </div>
 
 <table class="table">
@@ -27,21 +29,22 @@
     </thead>
     <tbody>
     {% if pull_requests %}
-    {% for pr in pull_requests %}
+    {% for mr in pull_requests %}
     <tr>
-        <th scope="row">{{ pr["num"] }}</th>
-        <td>{{ pr["title"] }}</td>
-        <td><a href="{{ pr["link"] }}">Link</a></td>
+        <th scope="row">{{ mr["num"] }}</th>
+        <td>{{ mr["title"] }}</td>
+        <td><a href="{{ mr["link"] }}">Link</a></td>
     </tr>
     {% endfor %}
     {% endif %}
     </tbody>
 </table>
 
-<!-- Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>
-``

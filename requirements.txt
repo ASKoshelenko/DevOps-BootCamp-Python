@@ -1,6 +1,7 @@
 flask==2.0.1
 requests==2.25.1
-requests-mock==1.10.0
 flake8==3.9.2
 pycodestyle==2.7.0
+pytest-cov==3.0.0
 tox==3.23.1
+
